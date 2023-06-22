@@ -8,13 +8,14 @@ app.use(express.json());
 // routes
 const userRoutes = require("./routes/userRoutes");
 const itemsRoutes = require("./routes/itemRoutes");
-
+const billsRoutes = require("./routes/billRoutes");
 
 app.get("/", (req, res) => res.status(200).send("API OKE BOS"));
 
 // routes API
 app.use("/api/users/", userRoutes);
 app.use("/api/items/", itemsRoutes);
+app.use("/api/bills/", billsRoutes);
 
 const PORT = process.env.PORT || 8080;
 
